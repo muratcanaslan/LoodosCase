@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		299080D7290B49B70090D314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299080D6290B49B70090D314 /* AppDelegate.swift */; };
 		299080E0290B49B80090D314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 299080DF290B49B80090D314 /* Assets.xcassets */; };
+		299080F4290B4F250090D314 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299080F2290B4F250090D314 /* SplashVC.swift */; };
+		299080F5290B4F250090D314 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299080F3290B4F250090D314 /* SplashVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +18,8 @@
 		299080D6290B49B70090D314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		299080DF290B49B80090D314 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		299080E4290B49B80090D314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		299080F2290B4F250090D314 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		299080F3290B4F250090D314 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		299080EB290B4CD80090D314 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				299080F2290B4F250090D314 /* SplashVC.swift */,
+				299080F3290B4F250090D314 /* SplashVC.xib */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -178,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				299080E0290B49B80090D314 /* Assets.xcassets in Resources */,
+				299080F5290B4F250090D314 /* SplashVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				299080D7290B49B70090D314 /* AppDelegate.swift in Sources */,
+				299080F4290B4F250090D314 /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

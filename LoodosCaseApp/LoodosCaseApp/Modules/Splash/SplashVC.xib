@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashVC" customModule="LoodosCaseApp" customModuleProvider="target">
+            <connections>
+                <outlet property="messageButton" destination="ptQ-IV-Cra" id="oX5-En-X59"/>
+                <outlet property="timeLabel" destination="9AR-fC-uPt" id="s4z-Md-39b"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptQ-IV-Cra">
+                    <rect key="frame" x="32" y="429" width="350" height="38"/>
+                    <color key="backgroundColor" red="0.74509803919999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="LOODOS">
+                        <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
+                    </state>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AR-fC-uPt">
+                    <rect key="frame" x="32" y="491" width="350" height="48"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                    <color key="textColor" systemColor="systemPinkColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="labelColor"/>
+            <constraints>
+                <constraint firstItem="ptQ-IV-Cra" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8dh-5u-SBn"/>
+                <constraint firstItem="9AR-fC-uPt" firstAttribute="top" secondItem="ptQ-IV-Cra" secondAttribute="bottom" constant="24" id="B1K-EU-qF5"/>
+                <constraint firstItem="ptQ-IV-Cra" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XvM-xA-WXa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9AR-fC-uPt" secondAttribute="trailing" constant="32" id="h7z-Sq-LAE"/>
+                <constraint firstItem="9AR-fC-uPt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="q7h-WH-fY8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ptQ-IV-Cra" secondAttribute="trailing" constant="32" id="sac-xO-FEQ"/>
+                <constraint firstItem="ptQ-IV-Cra" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="x9t-F1-XY6"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="110"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

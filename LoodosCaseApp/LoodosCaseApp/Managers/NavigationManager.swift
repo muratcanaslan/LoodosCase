@@ -19,6 +19,11 @@ struct NavigationManager {
     }
     
     static func showMovieList() {
-        
+        let vc = MovieListVC()
+        vc.modalTransitionStyle = .flipHorizontal
+        guard let window = UIApplication.shared.keyWindow else { return }
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
+        UIView.transition(with: window, duration: 0.4, options: .curveEaseInOut, animations: nil, completion: nil)
     }
 }

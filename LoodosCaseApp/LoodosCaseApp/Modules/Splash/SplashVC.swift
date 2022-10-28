@@ -25,7 +25,14 @@ final class SplashVC: BaseViewController {
     
     override func applyTexts() {
         super.applyTexts()
-        //TODO: - Add remote config texts
+        
+        setMessageText()
+    }
+    
+    private func setMessageText() {
+        FirebaseManager.fetchMessageText { message in
+            self.messageButton.setTitle(message, for: .normal)
+    }
     }
     
     private func startTimer() {

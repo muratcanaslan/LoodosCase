@@ -6,5 +6,7 @@ target 'LoodosCaseApp' do
   use_frameworks!
 
   # Pods for LoodosCaseApp
-
+  # Firebase
+  pod 'Firebase/Core'
+  pod 'Firebase/RemoteConfig'
 end

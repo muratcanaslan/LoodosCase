@@ -19,7 +19,8 @@ struct NavigationManager {
     }
     
     static func showMovieList() {
-        let vc = MovieListVC()
+        let movieListVC = MovieListVC()
+        let vc = UINavigationController(rootViewController: movieListVC)
         vc.modalTransitionStyle = .flipHorizontal
         guard let window = UIApplication.shared.keyWindow else { return }
         window.rootViewController = vc

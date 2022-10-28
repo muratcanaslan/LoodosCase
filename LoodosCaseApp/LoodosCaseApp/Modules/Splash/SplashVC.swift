@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SplashVC: UIViewController {
+final class SplashVC: BaseViewController {
 
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var messageButton: UIButton!

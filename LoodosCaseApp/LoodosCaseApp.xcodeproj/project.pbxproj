@@ -11,6 +11,7 @@
 		299080E0290B49B80090D314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 299080DF290B49B80090D314 /* Assets.xcassets */; };
 		299080F4290B4F250090D314 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299080F2290B4F250090D314 /* SplashVC.swift */; };
 		299080F5290B4F250090D314 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299080F3290B4F250090D314 /* SplashVC.xib */; };
+		299080F7290B52F50090D314 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299080F6290B52F50090D314 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		299080E4290B49B80090D314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		299080F2290B4F250090D314 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		299080F3290B4F250090D314 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
+		299080F6290B52F50090D314 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		299080EA290B4CCA0090D314 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				299080F6290B52F50090D314 /* BaseViewController.swift */,
 				299080ED290B4CE30090D314 /* Movie Detail */,
 				299080EC290B4CDE0090D314 /* Movie List */,
 				299080EB290B4CD80090D314 /* Splash */,
@@ -197,6 +200,7 @@
 			files = (
 				299080D7290B49B70090D314 /* AppDelegate.swift in Sources */,
 				299080F4290B4F250090D314 /* SplashVC.swift in Sources */,
+				299080F7290B52F50090D314 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

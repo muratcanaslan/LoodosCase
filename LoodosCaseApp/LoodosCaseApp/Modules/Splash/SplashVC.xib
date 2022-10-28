@@ -23,19 +23,19 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptQ-IV-Cra">
                     <rect key="frame" x="32" y="429" width="350" height="38"/>
-                    <color key="backgroundColor" red="0.74509803919999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="LOODOS">
+                    <state key="normal">
                         <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
                     </state>
                     <connections>
                         <action selector="didTapMessage:" destination="-1" eventType="touchUpInside" id="1Em-Jx-j8u"/>
                     </connections>
                 </button>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AR-fC-uPt">
-                    <rect key="frame" x="32" y="491" width="350" height="48"/>
-                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AR-fC-uPt">
+                    <rect key="frame" x="32" y="491" width="350" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
                     <color key="textColor" systemColor="systemPinkColor"/>
                     <nil key="highlightedColor"/>
                 </label>

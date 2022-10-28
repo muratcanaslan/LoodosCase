@@ -12,6 +12,8 @@ final class SplashVC: BaseViewController {
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var messageButton: UIButton!
     
+    var timer: Timer?
+    var count = 3
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +23,7 @@ final class SplashVC: BaseViewController {
         super.applyStyling()
         
         messageButton.layer.cornerRadius = 8
+        setTimeLabelHidden(true)
     }
     
     override func applyTexts() {
@@ -32,19 +35,38 @@ final class SplashVC: BaseViewController {
     private func setMessageText() {
         FirebaseManager.fetchMessageText { message in
             self.messageButton.setTitle(message, for: .normal)
+        }
     }
+    
+    private func setTimeLabelHidden(_ isHidden: Bool) {
+        timeLabel.isHidden = isHidden
     }
     
     private func startTimer() {
-        //TODO: - Show timer
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(showTimerUI), userInfo: nil, repeats: true)
     }
     
+    private func invalidateTimer() {
+        timer?.invalidate()
+    }
+    @objc private func showTimerUI() {
+        if count != 0 {
+            setTimeLabelHidden(false)
+            timeLabel.text = ("Navigate to movie list... \(count)")
+            count -= 1
+        }
+        else {
+            invalidateTimer()
+            setTimeLabelHidden(true)
+            navigateMovieList()
+        }
+    }
     //MARK: - UIAction
     @IBAction private func didTapMessage(_ sender: UIButton) {
-        //TODO: Start timer
+        startTimer()
     }
     
     private func navigateMovieList() {
-        //TODO: - Navigate MovieList module
+        NavigationManager.showMovieList()
     }
 }

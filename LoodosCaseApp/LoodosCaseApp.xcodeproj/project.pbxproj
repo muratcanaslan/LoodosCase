@@ -14,6 +14,7 @@
 		299080F7290B52F50090D314 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299080F6290B52F50090D314 /* BaseViewController.swift */; };
 		299080F9290C005E0090D314 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299080F8290C005E0090D314 /* FirebaseManager.swift */; };
 		299080FB290C020F0090D314 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 299080FA290C020F0090D314 /* GoogleService-Info.plist */; };
+		299080FD290C0DEF0090D314 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299080FC290C0DEF0090D314 /* NavigationManager.swift */; };
 		4427B97ABC87B785DDDFC467 /* Pods_LoodosCaseApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542E6C961E236A1D72211FD4 /* Pods_LoodosCaseApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		299080F6290B52F50090D314 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		299080F8290C005E0090D314 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		299080FA290C020F0090D314 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		299080FC290C0DEF0090D314 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		2C2F602DF65D844C824AC5B5 /* Pods-LoodosCaseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosCaseApp.debug.xcconfig"; path = "Target Support Files/Pods-LoodosCaseApp/Pods-LoodosCaseApp.debug.xcconfig"; sourceTree = "<group>"; };
 		542E6C961E236A1D72211FD4 /* Pods_LoodosCaseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoodosCaseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				299080F8290C005E0090D314 /* FirebaseManager.swift */,
+				299080FC290C0DEF0090D314 /* NavigationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				299080F9290C005E0090D314 /* FirebaseManager.swift in Sources */,
 				299080F4290B4F250090D314 /* SplashVC.swift in Sources */,
 				299080F7290B52F50090D314 /* BaseViewController.swift in Sources */,
+				299080FD290C0DEF0090D314 /* NavigationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

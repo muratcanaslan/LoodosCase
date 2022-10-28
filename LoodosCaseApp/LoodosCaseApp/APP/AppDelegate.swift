@@ -12,13 +12,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        applyFrameworks()
-        
         window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = SplashVC()
-        window?.rootViewController = vc
         window?.makeKeyAndVisible()
+        applyFrameworks()
+        NavigationManager.showSplash()
         return true
     }
     

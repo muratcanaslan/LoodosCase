@@ -12,12 +12,8 @@ final class SplashVC: BaseViewController {
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var messageButton: UIButton!
     
-    var timer: Timer?
-    var count = 3
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+    private var timer: Timer?
+    private var count = 3
     
     override func applyStyling() {
         super.applyStyling()
@@ -49,6 +45,7 @@ final class SplashVC: BaseViewController {
     private func invalidateTimer() {
         timer?.invalidate()
     }
+    
     @objc private func showTimerUI() {
         if count != 0 {
             setTimeLabelHidden(false)

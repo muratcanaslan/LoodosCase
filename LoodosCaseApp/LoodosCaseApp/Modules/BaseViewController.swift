@@ -13,6 +13,9 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        applyTexts()
+        applyStyling()
+        applyAdditionalSetup()
     }
     
     func applyStyling() { }

@@ -29,6 +29,9 @@
                     <state key="normal" title="LOODOS">
                         <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
                     </state>
+                    <connections>
+                        <action selector="didTapMessage:" destination="-1" eventType="touchUpInside" id="1Em-Jx-j8u"/>
+                    </connections>
                 </button>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AR-fC-uPt">
                     <rect key="frame" x="32" y="491" width="350" height="48"/>

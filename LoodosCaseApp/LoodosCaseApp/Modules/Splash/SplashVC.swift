@@ -16,4 +16,28 @@ final class SplashVC: BaseViewController {
         super.viewDidLoad()
         
     }
+    
+    override func applyStyling() {
+        super.applyStyling()
+        
+        messageButton.layer.cornerRadius = 8
+    }
+    
+    override func applyTexts() {
+        super.applyTexts()
+        //TODO: - Add remote config texts
+    }
+    
+    private func startTimer() {
+        //TODO: - Show timer
+    }
+    
+    //MARK: - UIAction
+    @IBAction private func didTapMessage(_ sender: UIButton) {
+        //TODO: Start timer
+    }
+    
+    private func navigateMovieList() {
+        //TODO: - Navigate MovieList module
+    }
 }

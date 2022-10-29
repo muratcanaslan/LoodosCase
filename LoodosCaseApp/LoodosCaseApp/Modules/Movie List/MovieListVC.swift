@@ -11,11 +11,18 @@ final class MovieListVC: BaseViewController {
     private let tableView = UITableView()
     private let searchBar = UISearchBar()
     
+    private let viewModel = MovieListViewModel()
+    
     override func applyAdditionalSetup() {
         super.applyAdditionalSetup()
+        
+        viewModel.delegate = self
+        
         setTableViewUI()
         setTableViewProperties()
         setSearchBar()
+        
+        viewModel.getMovieList()
     }
     
 }
@@ -44,18 +51,30 @@ extension MovieListVC {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.keyboardDismissMode = .onDrag
+        tableView.register(MovieCell.registerNib(), forCellReuseIdentifier: MovieCell.reuseIdentifier)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 }
 
 //MARK: - UITableView Delegate & Data Source
 extension MovieListVC: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        8
+        viewModel.cellVMs.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.contentView.backgroundColor = .red
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieCell.reuseIdentifier, for: indexPath) as? MovieCell else { return .init() }
+        cell.configure(with: viewModel.cellVMs[indexPath.row])
         return cell
+    }
+}
+
+//MARK: - MovieListViewModel Delegate
+extension MovieListVC: MovieListViewModelDelegate {
+    func reload() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }

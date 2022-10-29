@@ -9,4 +9,6 @@ target 'LoodosCaseApp' do
   # Firebase
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'
+  pod 'Moya'
+  pod 'Kingfisher'
 end

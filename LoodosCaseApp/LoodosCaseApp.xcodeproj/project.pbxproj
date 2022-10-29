@@ -17,6 +17,8 @@
 		299080FD290C0DEF0090D314 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299080FC290C0DEF0090D314 /* NavigationManager.swift */; };
 		299080FF290C14C40090D314 /* MovieListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299080FE290C14C40090D314 /* MovieListVC.swift */; };
 		29908101290C15040090D314 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29908100290C15040090D314 /* MovieListViewModel.swift */; };
+		29908103290DAACB0090D314 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29908102290DAACB0090D314 /* NetworkManager.swift */; };
+		29908106290DAE020090D314 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29908105290DAE020090D314 /* UIImageView+Ext.swift */; };
 		4427B97ABC87B785DDDFC467 /* Pods_LoodosCaseApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542E6C961E236A1D72211FD4 /* Pods_LoodosCaseApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		299080FC290C0DEF0090D314 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		299080FE290C14C40090D314 /* MovieListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListVC.swift; sourceTree = "<group>"; };
 		29908100290C15040090D314 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		29908102290DAACB0090D314 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		29908105290DAE020090D314 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		2C2F602DF65D844C824AC5B5 /* Pods-LoodosCaseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosCaseApp.debug.xcconfig"; path = "Target Support Files/Pods-LoodosCaseApp/Pods-LoodosCaseApp.debug.xcconfig"; sourceTree = "<group>"; };
 		542E6C961E236A1D72211FD4 /* Pods_LoodosCaseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoodosCaseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -75,6 +79,7 @@
 				299080E4290B49B80090D314 /* Info.plist */,
 				299080EF290B4D170090D314 /* APP */,
 				299080EE290B4D110090D314 /* Resources */,
+				29908104290DADF60090D314 /* Extensions */,
 				299080F0290B4D480090D314 /* Core */,
 				299080EA290B4CCA0090D314 /* Modules */,
 				299080F1290B4D500090D314 /* Managers */,
@@ -146,8 +151,17 @@
 			children = (
 				299080F8290C005E0090D314 /* FirebaseManager.swift */,
 				299080FC290C0DEF0090D314 /* NavigationManager.swift */,
+				29908102290DAACB0090D314 /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		29908104290DADF60090D314 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				29908105290DAE020090D314 /* UIImageView+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		6C24FC6EB2EEF498F91F4F84 /* Frameworks */ = {
@@ -285,7 +299,9 @@
 				299080D7290B49B70090D314 /* AppDelegate.swift in Sources */,
 				299080F9290C005E0090D314 /* FirebaseManager.swift in Sources */,
 				299080F4290B4F250090D314 /* SplashVC.swift in Sources */,
+				29908106290DAE020090D314 /* UIImageView+Ext.swift in Sources */,
 				29908101290C15040090D314 /* MovieListViewModel.swift in Sources */,
+				29908103290DAACB0090D314 /* NetworkManager.swift in Sources */,
 				299080F7290B52F50090D314 /* BaseViewController.swift in Sources */,
 				299080FD290C0DEF0090D314 /* NavigationManager.swift in Sources */,
 				299080FF290C14C40090D314 /* MovieListVC.swift in Sources */,

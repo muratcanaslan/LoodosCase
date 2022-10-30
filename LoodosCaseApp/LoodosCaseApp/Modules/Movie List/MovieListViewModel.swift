@@ -25,16 +25,16 @@ final class MovieListViewModel {
     weak var delegate: MovieListViewModelDelegate?
     
     func getMovieList() {
-        NetworkManager.shared.getMovie(with: keyword) { result in
+        NetworkManager.shared.getMovie(with: keyword) { [weak self] result in
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)
             case .success(let response):
                 if let response = response, !(response.isEmpty) {
-                    self.cellVMs.append(contentsOf: response.map({ .init(model: $0)}))
-                    self.delegate?.reload()
+                    self?.cellVMs.append(contentsOf: response.map({ .init(model: $0)}))
+                    self?.delegate?.reload()
                 } else {
-                    
+                    //TODO: - No response, empty case
                 }
                 
             }

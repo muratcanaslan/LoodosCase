@@ -11,10 +11,12 @@ struct MovieCellViewModel {
     let name: String?
     let desc: String?
     let imageURL: URL?
+    let imdbID: String?
     
     init(model: MovieResponse) {
         self.name = model.title
         self.desc = model.year
-        self.imageURL = model.poster
+        self.imageURL = model.posterURL
+        self.imdbID = model.imdbID
     }
 }

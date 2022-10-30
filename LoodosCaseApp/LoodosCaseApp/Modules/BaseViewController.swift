@@ -13,6 +13,8 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        navigationItem.backButtonTitle = ""
+        
         applyTexts()
         applyStyling()
         applyAdditionalSetup()

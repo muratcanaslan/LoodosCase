@@ -71,6 +71,12 @@ extension MovieListVC: UITableViewDataSource, UITableViewDelegate {
         cell.configure(with: viewModel.cellVMs[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let imdbID = viewModel.cellVMs[indexPath.row].imdbID else { return }
+        let vc = MovieDetailVC(imdbID: imdbID)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 //MARK: - MovieListViewModel Delegate

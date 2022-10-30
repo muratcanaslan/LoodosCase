@@ -21,7 +21,7 @@ struct MovieResponse: Codable {
     let language: String?
     let country: String?
     let awards: String?
-    let poster: URL?
+    let poster: String?
     let imdbID: String?
     let type: String?
     let dvd: String?
@@ -32,7 +32,12 @@ struct MovieResponse: Codable {
     let metascore: String?
     let imdbVotes: String?
     let imdbRating: String?
-    let ratings: String?
+    let ratings: [Source]?
+    
+    var posterURL: URL? {
+        guard let poster = poster else { return nil }
+        return URL(string: poster)
+    }
     
     enum CodingKeys: String, CodingKey {
         case title      = "Title"

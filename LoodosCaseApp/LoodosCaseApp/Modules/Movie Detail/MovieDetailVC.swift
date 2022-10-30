@@ -68,8 +68,8 @@ extension MovieDetailVC {
             self?.setUI(with: movie)
         }
         
-        viewModel.onError = { [weak self] message in
-            NavigationManager.showAlert(with: "Sonuç bulunamadı")
+        viewModel.onError = { message in
+            NavigationManager.showAlert(with: message)
             
         }
         

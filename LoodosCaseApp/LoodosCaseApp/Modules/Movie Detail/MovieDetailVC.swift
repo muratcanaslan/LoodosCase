@@ -42,6 +42,7 @@ final class MovieDetailVC: BaseViewController {
         super.applyAdditionalSetup()
         
         setBlocks()
+        viewModel.sendEvent()
         viewModel.getMovie()
     }
     

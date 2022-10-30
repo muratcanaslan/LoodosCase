@@ -36,4 +36,8 @@ final class MovieDetailViewModel {
             }
         }
     }
+    
+    func sendEvent() {
+        FirebaseManager.sendEvent(eventName: EventKeys.movieDetailShowed, parameters: nil)
+    }
 }

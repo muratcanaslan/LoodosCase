@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseRemoteConfig
 import FirebaseCore
+import Firebase
 
 struct FirebaseManager  {
     static let shared = FirebaseManager()
@@ -36,6 +37,10 @@ struct FirebaseManager  {
             }
         }
     }
+    
+    static func sendEvent(eventName: String, parameters: [String: Any]? = nil) {
+        Analytics.logEvent(eventName, parameters: parameters)
+    }
 }
 
 enum ConfigKeys {
@@ -43,3 +48,6 @@ enum ConfigKeys {
     static let messageText = "message_text"
   }
 
+enum EventKeys {
+    static let movieDetailShowed = "movie_detail_showed"
+}

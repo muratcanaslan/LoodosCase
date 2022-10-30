@@ -28,9 +28,9 @@ struct NavigationManager {
         UIView.transition(with: window, duration: 0.4, options: .curveEaseInOut, animations: nil, completion: nil)
     }
     
-    static func showAlert(with title: String?) {
+    static func showAlert(with title: String?, buttonTitle: String? = "Cancel") {
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
-        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelButton = UIAlertAction(title: buttonTitle, style: .cancel, handler: nil)
         alert.addAction(cancelButton)
         NavigationManager.getTopViewController()?.present(alert, animated: true)
     }

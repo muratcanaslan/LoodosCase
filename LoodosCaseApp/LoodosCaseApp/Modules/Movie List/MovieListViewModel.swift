@@ -18,6 +18,8 @@ final class MovieListViewModel {
     
     var cellVMs = [MovieCellViewModel]()
     
+    var isFirstRequest: Bool? = true
+
     var keyword: String = "" {
         didSet {
             removeCellVMs()
@@ -38,8 +40,11 @@ final class MovieListViewModel {
                 if let response = response{
                     self?.cellVMs.append(contentsOf: response.map({ .init(model: $0)}))
                 } else {
-                    self?.delegate?.showAlert(with: "Lütfen arama yapınız.")
+                    if !(self?.isFirstRequest ?? false) {
+                        self?.delegate?.showAlert(with: "Sonuç bulunamadı")
+                    }
                 }
+                self?.isFirstRequest = false
                 self?.delegate?.reload()
                 
             }

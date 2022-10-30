@@ -60,7 +60,9 @@ final class SplashVC: BaseViewController {
     }
     //MARK: - UIAction
     @IBAction private func didTapMessage(_ sender: UIButton) {
-        startTimer()
+        NetworkStatusManager.shared.checkInternetConnection { isInternetConnected in
+            isInternetConnected ? self.startTimer() : NavigationManager.showAlert(with: "İnternet bağlantısı yok.")
+        }
     }
     
     private func navigateMovieList() {

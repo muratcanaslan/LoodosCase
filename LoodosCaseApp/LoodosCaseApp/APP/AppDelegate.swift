@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func applyFrameworks() {
+        NetworkStatusManager.shared.checkInternetConnection()
         FirebaseManager.configureFirebase()
         FirebaseManager.shared.configureRemoteConfig()
     }

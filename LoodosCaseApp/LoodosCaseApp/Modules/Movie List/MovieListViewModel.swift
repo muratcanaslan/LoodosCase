@@ -13,21 +13,35 @@ protocol MovieListViewModelDelegate: AnyObject {
 
 final class MovieListViewModel {
     
-    var keyword: String? {
+    var cellVMs = [MovieCellViewModel]()
+    
+    var keyword: String = "" {
         didSet {
-            reset()
+            removeCellVMs()
+            getMovieList()
+        }
+    }
+        
+    weak var delegate: MovieListViewModelDelegate?
+    
+    func getMovieList() {
+        NetworkManager.shared.getMovie(with: keyword) { result in
+            switch result {
+            case .failure(let error):
+                print(error.localizedDescription)
+            case .success(let response):
+                if let response = response, !(response.isEmpty) {
+                    self.cellVMs.append(contentsOf: response.map({ .init(model: $0)}))
+                    self.delegate?.reload()
+                } else {
+                    
+                }
+                
+            }
         }
     }
     
-    var cellVMs = [MovieCellViewModel]()
-    
-    weak var delegate: MovieListViewModelDelegate?
-    
-    func getMovieList(with keyword: String? = nil) {
-        
-    }
-    
-    private func reset() {
-        
+    func removeCellVMs() {
+        self.cellVMs = []
     }
 }

@@ -20,16 +20,19 @@ final class MovieListVC: BaseViewController {
         
         setTableViewUI()
         setTableViewProperties()
-        setSearchBar()
-        
+        if #available(iOS 13.0, *) {
+            setSearchBar()
+        }
         viewModel.getMovieList()
     }
-    
 }
 //MARK: - SearchBar Configuration
+@available(iOS 13.0, *)
 extension MovieListVC {
     private func setSearchBar() {
         navigationItem.titleView = searchBar
+        searchBar.searchTextField.clearButtonMode = .never
+        searchBar.delegate = self
     }
 }
 
@@ -76,5 +79,12 @@ extension MovieListVC: MovieListViewModelDelegate {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+}
+
+//MARK: - SearchBar Delegate
+extension MovieListVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.keyword = searchBar.text ?? ""
     }
 }

@@ -9,6 +9,8 @@ import Foundation
 
 protocol MovieListViewModelDelegate: AnyObject {
     func reload()
+    func startLoading()
+    func stopLoading()
 }
 
 final class MovieListViewModel {
@@ -25,17 +27,20 @@ final class MovieListViewModel {
     weak var delegate: MovieListViewModelDelegate?
     
     func getMovieList() {
+        self.delegate?.startLoading()
         NetworkManager.shared.getMovie(with: keyword) { [weak self] result in
+            self?.delegate?.stopLoading()
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)
             case .success(let response):
                 if let response = response, !(response.isEmpty) {
                     self?.cellVMs.append(contentsOf: response.map({ .init(model: $0)}))
-                    self?.delegate?.reload()
                 } else {
-                    //TODO: - No response, empty case
+                    
                 }
+                
+                self?.delegate?.reload()
                 
             }
         }

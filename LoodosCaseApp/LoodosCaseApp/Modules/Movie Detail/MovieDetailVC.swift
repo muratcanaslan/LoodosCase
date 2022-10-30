@@ -72,6 +72,14 @@ extension MovieDetailVC {
             //TODO: Show error
             
         }
+        
+        viewModel.onLoading = { [weak self] showLoading in
+            if showLoading {
+                self?.showLoading()
+            } else {
+                self?.hideLoading()
+            }
+        }
     }
 }
 

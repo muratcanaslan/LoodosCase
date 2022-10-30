@@ -7,8 +7,10 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, LoadingHandler {
     
+    lazy var loadingView = LoadingView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

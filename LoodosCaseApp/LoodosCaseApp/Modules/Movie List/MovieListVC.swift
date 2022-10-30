@@ -88,6 +88,14 @@ extension MovieListVC: MovieListViewModelDelegate {
             self.tableView.reloadData()
         }
     }
+    
+    func startLoading() {
+        showLoading()
+    }
+    
+    func stopLoading() {
+        hideLoading()
+    }
 }
 
 //MARK: - SearchBar Delegate

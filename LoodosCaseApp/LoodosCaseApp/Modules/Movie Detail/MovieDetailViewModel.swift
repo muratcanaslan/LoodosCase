@@ -9,7 +9,7 @@ import Foundation
 
 final class MovieDetailViewModel {
     
-    typealias OnSuccess = () -> Void
+    typealias OnSuccess = (_ model: MovieResponse) -> Void
     typealias OnError   = (_ message: String?) -> Void
     
     var onSuccess: OnSuccess?
@@ -25,9 +25,10 @@ final class MovieDetailViewModel {
         NetworkManager.shared.getMovieDetail(with: imdbID) { [weak self] result in
             switch result {
             case .failure(let error):
-                print(error.localizedDescription)
+                self?.onError?(error.localizedDescription)
             case .success(let response):
-                print(response)
+                guard let movie = response else { return }
+                self?.onSuccess?(movie)
             }
         }
     }

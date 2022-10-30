@@ -13,6 +13,8 @@ final class MovieListVC: BaseViewController {
     
     private let viewModel = MovieListViewModel()
     
+    private var timer = Timer()
+    
     override func applyAdditionalSetup() {
         super.applyAdditionalSetup()
         
@@ -91,6 +93,10 @@ extension MovieListVC: MovieListViewModelDelegate {
 //MARK: - SearchBar Delegate
 extension MovieListVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.keyword = searchBar.text ?? ""
+        timer.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { _ in
+            self.viewModel.keyword = searchBar.text ?? ""
+        })
+        
     }
 }

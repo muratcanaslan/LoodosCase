@@ -7,8 +7,18 @@
 
 import UIKit
 
-class MovieDetailVC: BaseViewController {
+final class MovieDetailVC: BaseViewController {
 
+    @IBOutlet private weak var movieImage: UIImageView!
+    @IBOutlet private weak var movieName: UILabel!
+    @IBOutlet private weak var movieYear: UILabel!
+    @IBOutlet private weak var moviePlot: UILabel!
+    @IBOutlet private weak var movieGenre: UILabel!
+    @IBOutlet private weak var movieDirector: UILabel!
+    @IBOutlet private weak var movieRating: UILabel!
+    @IBOutlet private weak var movieReleasedDate: UILabel!
+    @IBOutlet private weak var movieRuntime: UILabel!
+    
     private let viewModel: MovieDetailViewModel
     
     init(imdbID: String) {
@@ -30,6 +40,38 @@ class MovieDetailVC: BaseViewController {
     
     override func applyAdditionalSetup() {
         super.applyAdditionalSetup()
+        
+        setBlocks()
         viewModel.getMovie()
     }
+    
+    private func setUI(with movie: MovieResponse) {
+        navigationItem.title = movie.title
+        
+        if let url = movie.posterURL {
+            movieImage.downloadedFrom(url: url)
+        }
+        movieYear.text = "Year: \(movie.year ?? "-")"
+        movieName.text = "Name: \(movie.title ?? "-")"
+        moviePlot.text = "Description: \(movie.plot ?? "-")"
+        movieGenre.text = "Genre: \(movie.genre ?? "-")"
+        movieDirector.text = "Director: \(movie.director ?? "-")"
+        movieRating.text = "Rating: \(movie.imdbRating ?? "-")"
+        movieReleasedDate.text = "Released Date: \(movie.released ?? "-")"
+        movieRuntime.text = "Duration: \(movie.runtime ?? "-")"
+    }
 }
+
+extension MovieDetailVC {
+    private func setBlocks() {
+        viewModel.onSuccess = { [weak self] movie in
+            self?.setUI(with: movie)
+        }
+        
+        viewModel.onError = { [weak self] message in
+            //TODO: Show error
+            
+        }
+    }
+}
+

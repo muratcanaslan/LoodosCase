@@ -69,7 +69,7 @@ extension MovieDetailVC {
         }
         
         viewModel.onError = { [weak self] message in
-            //TODO: Show error
+            NavigationManager.showAlert(with: "Sonuç bulunamadı")
             
         }
         

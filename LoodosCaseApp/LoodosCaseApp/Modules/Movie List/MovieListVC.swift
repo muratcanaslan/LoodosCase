@@ -96,6 +96,10 @@ extension MovieListVC: MovieListViewModelDelegate {
     func stopLoading() {
         hideLoading()
     }
+    
+    func showAlert(with message: String) {
+        NavigationManager.showAlert(with: message)
+    }
 }
 
 //MARK: - SearchBar Delegate

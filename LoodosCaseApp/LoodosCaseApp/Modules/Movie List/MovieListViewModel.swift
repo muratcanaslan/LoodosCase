@@ -11,6 +11,7 @@ protocol MovieListViewModelDelegate: AnyObject {
     func reload()
     func startLoading()
     func stopLoading()
+    func showAlert(with message: String)
 }
 
 final class MovieListViewModel {
@@ -34,12 +35,11 @@ final class MovieListViewModel {
             case .failure(let error):
                 print(error.localizedDescription)
             case .success(let response):
-                if let response = response, !(response.isEmpty) {
+                if let response = response{
                     self?.cellVMs.append(contentsOf: response.map({ .init(model: $0)}))
                 } else {
-                    
+                    self?.delegate?.showAlert(with: "Lütfen arama yapınız.")
                 }
-                
                 self?.delegate?.reload()
                 
             }

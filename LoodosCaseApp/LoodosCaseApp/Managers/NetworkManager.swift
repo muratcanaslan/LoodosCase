@@ -9,8 +9,10 @@ import Foundation
 import Moya
 
 final class NetworkManager {
+    
     static let shared = NetworkManager()
-    var provider = MoyaProvider<MovieTarget>(plugins: [NetworkLoggerPlugin()])
+    
+    let provider = MoyaProvider<MovieTarget>(plugins: [NetworkLoggerPlugin()])
 
     private init () {}
     

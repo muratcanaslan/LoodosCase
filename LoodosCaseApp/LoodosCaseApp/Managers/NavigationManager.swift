@@ -27,4 +27,19 @@ struct NavigationManager {
         window.makeKeyAndVisible()
         UIView.transition(with: window, duration: 0.4, options: .curveEaseInOut, animations: nil, completion: nil)
     }
+    
+    static func showAlert(with title: String?) {
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelButton)
+        NavigationManager.getTopViewController()?.present(alert, animated: true)
+    }
+    
+    static func getTopViewController() -> UIViewController? {
+        var topViewController = UIApplication.shared.delegate!.window!!.rootViewController!
+        while topViewController.presentedViewController != nil {
+            topViewController = topViewController.presentedViewController!
+        }
+        return topViewController
+    }
 }

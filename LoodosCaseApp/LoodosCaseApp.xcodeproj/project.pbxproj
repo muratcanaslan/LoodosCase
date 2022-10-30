@@ -170,9 +170,9 @@
 		299080F0290B4D480090D314 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2990810F290DB6B80090D314 /* MovieTarget.swift */,
 				29908112290EBC0B0090D314 /* Request */,
 				29908111290EBC070090D314 /* Response */,
-				2990810F290DB6B80090D314 /* MovieTarget.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
